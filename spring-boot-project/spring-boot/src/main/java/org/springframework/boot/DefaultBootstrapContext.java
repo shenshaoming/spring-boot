@@ -35,8 +35,10 @@ import org.springframework.util.Assert;
  */
 public class DefaultBootstrapContext implements ConfigurableBootstrapContext {
 
+	// for bootstrapRegistry
 	private final Map<Class<?>, InstanceSupplier<?>> instanceSuppliers = new HashMap<>();
 
+	// for bootstrapContext
 	private final Map<Class<?>, Object> instances = new HashMap<>();
 
 	private final ApplicationEventMulticaster events = new SimpleApplicationEventMulticaster();
